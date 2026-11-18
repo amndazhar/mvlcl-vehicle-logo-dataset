@@ -1,0 +1,851 @@
+{
+  "checks": [
+    {
+      "check": "Image files open and decode",
+      "result": "0 corrupt of 1199",
+      "status": "pass"
+    },
+    {
+      "check": "Every image has a label file",
+      "result": "0 missing",
+      "status": "pass"
+    },
+    {
+      "check": "Exactly one logo box per image",
+      "result": "0 exceptions",
+      "status": "pass"
+    },
+    {
+      "check": "Label rows well-formed, class id 0\u20139",
+      "result": "0 invalid",
+      "status": "pass"
+    },
+    {
+      "check": "Boxes inside image, non-zero size",
+      "result": "0 invalid",
+      "status": "pass"
+    },
+    {
+      "check": "Label class matches source-clip brand",
+      "result": "4 mismatches, corrected",
+      "status": "fixed"
+    },
+    {
+      "check": "No exact duplicate files",
+      "result": "0 groups",
+      "status": "pass"
+    },
+    {
+      "check": "No source frame reused under another clip ID",
+      "result": "32 likely pairs (11 span train/test)",
+      "status": "flag"
+    },
+    {
+      "check": "Other visually similar pairs (same camera view)",
+      "result": "76 candidates, unverified",
+      "status": "flag"
+    },
+    {
+      "check": "No clip ID in both train and test",
+      "result": "0 clips",
+      "status": "pass"
+    },
+    {
+      "check": "No GPS metadata in image files",
+      "result": "0 files",
+      "status": "pass"
+    },
+    {
+      "check": "Duplicate frame from one source clip",
+      "result": "1 found, removed",
+      "status": "fixed"
+    },
+    {
+      "check": "Test set independent of training set (original folders)",
+      "result": "1 test folder = training set",
+      "status": "fixed"
+    },
+    {
+      "check": "Separate validation split",
+      "result": "not present in original project",
+      "status": "flag"
+    },
+    {
+      "check": "Privacy: faces, plates, overlay text removed",
+      "result": "pipeline built; manual review pending",
+      "status": "flag"
+    }
+  ],
+  "findings": {
+    "likely_duplicate_pairs": [
+      {
+        "a": "optimal_Hyundai_003",
+        "b": "complex_Hyundai_005_rain",
+        "distance": 7,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Hyundai_004",
+        "b": "complex_Hyundai_006_rain",
+        "distance": 6,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Hyundai_011_rotate_neg20",
+        "b": "complex_Hyundai_021_rotate_neg20",
+        "distance": 5,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Hyundai_051_crop60",
+        "b": "complex_Hyundai_049_crop60",
+        "distance": 5,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mercedes_003",
+        "b": "complex_Mercedes_006_rain",
+        "distance": 7,
+        "spans_train_test": true,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mercedes_004",
+        "b": "complex_Mercedes_007_rain",
+        "distance": 5,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mercedes_014_rotate20",
+        "b": "complex_Mercedes_021_rotate20",
+        "distance": 8,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mercedes_016_rotate30",
+        "b": "complex_Mercedes_023_rotate30",
+        "distance": 7,
+        "spans_train_test": true,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mercedes_039_crop60",
+        "b": "complex_Mercedes_050_crop60",
+        "distance": 6,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mercedes_060_crop75",
+        "b": "complex_Mercedes_052_crop75",
+        "distance": 8,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "complex_BMW_001",
+        "b": "complex_BMW_006_rain",
+        "distance": 8,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_005",
+        "b": "complex_BMW_010_rain",
+        "distance": 2,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_018_rotate_neg20",
+        "b": "complex_BMW_035_rotate_neg20",
+        "distance": 6,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_021_rotate20",
+        "b": "complex_BMW_037_rotate20",
+        "distance": 6,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_023_rotate30",
+        "b": "complex_BMW_039_rotate30",
+        "distance": 5,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_026_rotate30",
+        "b": "complex_BMW_042_rotate30",
+        "distance": 3,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_034_rotate20",
+        "b": "complex_BMW_017_rotate20",
+        "distance": 6,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_036_rotate30",
+        "b": "complex_BMW_019_rotate30",
+        "distance": 3,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_048_crop75",
+        "b": "complex_BMW_055_crop75",
+        "distance": 6,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Hyundai_007_rotate20",
+        "b": "complex_Hyundai_014_rotate20",
+        "distance": 5,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Hyundai_019_flipH",
+        "b": "optimal_Hyundai_005_flipH",
+        "distance": 8,
+        "spans_train_test": true,
+        "spans_lighting": true
+      },
+      {
+        "a": "complex_Mazda_033_rotate30",
+        "b": "complex_Mazda_017_rotate30",
+        "distance": 2,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Mercedes_041_crop75",
+        "b": "optimal_Mercedes_048_crop75",
+        "distance": 7,
+        "spans_train_test": true,
+        "spans_lighting": true
+      },
+      {
+        "a": "complex_Mercedes_042_crop60",
+        "b": "optimal_Mercedes_053_crop60",
+        "distance": 7,
+        "spans_train_test": true,
+        "spans_lighting": true
+      },
+      {
+        "a": "complex_Mercedes_044_crop60",
+        "b": "complex_Mercedes_051_crop60",
+        "distance": 8,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Nissan_024_rotate30",
+        "b": "complex_Nissan_045_rotate30",
+        "distance": 2,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Proton_003",
+        "b": "complex_Proton_008_rain",
+        "distance": 4,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Proton_028_flipH",
+        "b": "complex_Proton_044_flipH",
+        "distance": 7,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Toyota_013_rotate20",
+        "b": "complex_Toyota_028_rotate20",
+        "distance": 6,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Volkswagen_009_rain",
+        "b": "complex_Volkswagen_011_rain",
+        "distance": 5,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Volkswagen_022_flipH",
+        "b": "complex_Volkswagen_032_flipH",
+        "distance": 8,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Volkswagen_030_rotate_neg20",
+        "b": "complex_Volkswagen_038_rotate_neg20",
+        "distance": 4,
+        "spans_train_test": false,
+        "spans_lighting": false
+      }
+    ],
+    "candidate_duplicate_pairs": [
+      {
+        "a": "optimal_Hyundai_014_rotate20",
+        "b": "complex_Hyundai_023_rotate20",
+        "distance": 10,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Hyundai_018_rotate20",
+        "b": "complex_Hyundai_024_rotate20",
+        "distance": 9,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Hyundai_021_crop60",
+        "b": "complex_Hyundai_025_crop60",
+        "distance": 13,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Hyundai_022_crop75",
+        "b": "complex_Hyundai_026_crop75",
+        "distance": 12,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Hyundai_034_crop75",
+        "b": "complex_Hyundai_045_crop75",
+        "distance": 12,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Hyundai_058_crop75",
+        "b": "complex_Hyundai_052_crop75",
+        "distance": 14,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mazda_037_crop75",
+        "b": "optimal_Volkswagen_048_crop75",
+        "distance": 17,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "optimal_Mercedes_013_flipH",
+        "b": "complex_Mercedes_020_flipH",
+        "distance": 11,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mercedes_015_rotate_neg20",
+        "b": "complex_Mercedes_022_rotate_neg20",
+        "distance": 18,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mercedes_054_crop75",
+        "b": "complex_Mercedes_043_crop75",
+        "distance": 18,
+        "spans_train_test": true,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mercedes_059_crop60",
+        "b": "complex_Mercedes_044_crop60",
+        "distance": 15,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Mercedes_059_crop60",
+        "b": "complex_Mercedes_051_crop60",
+        "distance": 11,
+        "spans_train_test": false,
+        "spans_lighting": true
+      },
+      {
+        "a": "optimal_Proton_025_crop75",
+        "b": "optimal_Mazda_022_crop75",
+        "distance": 17,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "optimal_Toyota_014_rotate30",
+        "b": "optimal_Volkswagen_020_rotate30",
+        "distance": 15,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "optimal_Toyota_029_crop75",
+        "b": "optimal_Volkswagen_028_crop75",
+        "distance": 18,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_016_rotate30",
+        "b": "complex_BMW_032_rotate30",
+        "distance": 13,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_018_rotate_neg20",
+        "b": "complex_Proton_029_rotate_neg20",
+        "distance": 13,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_018_rotate_neg20",
+        "b": "complex_Proton_030_rotate_neg20",
+        "distance": 18,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_033_flipH",
+        "b": "complex_Proton_044_flipH",
+        "distance": 20,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_034_rotate20",
+        "b": "complex_Mazda_040_rotate20",
+        "distance": 11,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_034_rotate20",
+        "b": "complex_Nissan_034_rotate20",
+        "distance": 14,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_034_rotate20",
+        "b": "complex_Perodua_021_rotate20",
+        "distance": 18,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_034_rotate20",
+        "b": "complex_Honda_011_rotate20",
+        "distance": 13,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_035_rotate_neg20",
+        "b": "complex_Proton_029_rotate_neg20",
+        "distance": 15,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_035_rotate_neg20",
+        "b": "complex_Proton_030_rotate_neg20",
+        "distance": 16,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_036_rotate30",
+        "b": "complex_Honda_027_rotate30",
+        "distance": 18,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_036_rotate30",
+        "b": "complex_Mazda_042_rotate30",
+        "distance": 10,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_036_rotate30",
+        "b": "complex_Perodua_037_rotate30",
+        "distance": 18,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_036_rotate30",
+        "b": "complex_Toyota_024_rotate30",
+        "distance": 20,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_049_crop60",
+        "b": "complex_BMW_056_crop60",
+        "distance": 13,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_060_crop75",
+        "b": "complex_BMW_054_crop75",
+        "distance": 9,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Honda_001",
+        "b": "complex_Mazda_004",
+        "distance": 16,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Honda_002",
+        "b": "complex_Honda_007_rain",
+        "distance": 18,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Honda_010_flipH",
+        "b": "complex_Toyota_022_flipH",
+        "distance": 13,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Honda_010_flipH",
+        "b": "complex_Toyota_042_flipH",
+        "distance": 19,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Honda_027_rotate30",
+        "b": "complex_Mazda_042_rotate30",
+        "distance": 18,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Honda_027_rotate30",
+        "b": "complex_Perodua_037_rotate30",
+        "distance": 20,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Honda_027_rotate30",
+        "b": "complex_Perodua_040_rotate30",
+        "distance": 20,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Honda_027_rotate30",
+        "b": "complex_Toyota_024_rotate30",
+        "distance": 16,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Honda_027_rotate30",
+        "b": "complex_BMW_019_rotate30",
+        "distance": 19,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Hyundai_008_rotate_neg20",
+        "b": "complex_Hyundai_015_rotate_neg20",
+        "distance": 17,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Hyundai_012_rotate30",
+        "b": "complex_Hyundai_018_rotate30",
+        "distance": 19,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Hyundai_051_crop60",
+        "b": "optimal_Hyundai_057_crop60",
+        "distance": 19,
+        "spans_train_test": true,
+        "spans_lighting": true
+      },
+      {
+        "a": "complex_Mazda_040_rotate20",
+        "b": "complex_Nissan_034_rotate20",
+        "distance": 19,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Mazda_040_rotate20",
+        "b": "complex_Perodua_021_rotate20",
+        "distance": 15,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Mazda_040_rotate20",
+        "b": "complex_BMW_017_rotate20",
+        "distance": 13,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Mazda_040_rotate20",
+        "b": "complex_Honda_011_rotate20",
+        "distance": 10,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Mazda_042_rotate30",
+        "b": "complex_Perodua_037_rotate30",
+        "distance": 16,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Mazda_042_rotate30",
+        "b": "complex_BMW_019_rotate30",
+        "distance": 11,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Mercedes_013_flipH",
+        "b": "optimal_Mercedes_005_flipH",
+        "distance": 11,
+        "spans_train_test": true,
+        "spans_lighting": true
+      },
+      {
+        "a": "complex_Nissan_030_rotate20",
+        "b": "complex_Perodua_024_rotate20",
+        "distance": 12,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Nissan_033_flipH",
+        "b": "complex_Proton_028_flipH",
+        "distance": 20,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Nissan_034_rotate20",
+        "b": "complex_Perodua_021_rotate20",
+        "distance": 18,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Nissan_034_rotate20",
+        "b": "complex_BMW_017_rotate20",
+        "distance": 10,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Nissan_034_rotate20",
+        "b": "complex_Honda_011_rotate20",
+        "distance": 13,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Perodua_021_rotate20",
+        "b": "complex_BMW_017_rotate20",
+        "distance": 16,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Perodua_021_rotate20",
+        "b": "complex_Honda_011_rotate20",
+        "distance": 11,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Perodua_031_flipH",
+        "b": "complex_Perodua_016_flipH",
+        "distance": 18,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Perodua_037_rotate30",
+        "b": "complex_Perodua_040_rotate30",
+        "distance": 16,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Perodua_037_rotate30",
+        "b": "complex_Proton_046_rotate30",
+        "distance": 18,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Perodua_037_rotate30",
+        "b": "complex_BMW_019_rotate30",
+        "distance": 19,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Perodua_040_rotate30",
+        "b": "complex_Proton_046_rotate30",
+        "distance": 14,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Perodua_040_rotate30",
+        "b": "complex_BMW_019_rotate30",
+        "distance": 19,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Perodua_060_crop75",
+        "b": "complex_Toyota_053_crop75",
+        "distance": 18,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Proton_012_rotate30",
+        "b": "complex_Proton_015_rotate30",
+        "distance": 16,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Proton_029_rotate_neg20",
+        "b": "complex_Proton_030_rotate_neg20",
+        "distance": 19,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Proton_045_flipH",
+        "b": "complex_Proton_044_flipH",
+        "distance": 19,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Proton_046_rotate30",
+        "b": "complex_BMW_019_rotate30",
+        "distance": 19,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Toyota_003",
+        "b": "complex_Nissan_005_rain",
+        "distance": 18,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Toyota_003",
+        "b": "complex_Toyota_004",
+        "distance": 18,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Toyota_023_rotate_neg20",
+        "b": "complex_Toyota_039_rotate_neg20",
+        "distance": 13,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Volkswagen_037_rotate20",
+        "b": "complex_Volkswagen_025_rotate20",
+        "distance": 18,
+        "spans_train_test": true,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_017_rotate20",
+        "b": "complex_Honda_011_rotate20",
+        "distance": 11,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_BMW_043_crop60",
+        "b": "complex_BMW_045_crop60",
+        "distance": 9,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Hyundai_028_crop60",
+        "b": "complex_Hyundai_038_crop60",
+        "distance": 10,
+        "spans_train_test": false,
+        "spans_lighting": false
+      },
+      {
+        "a": "complex_Volkswagen_023_rotate20",
+        "b": "complex_Volkswagen_041_rotate20",
+        "distance": 14,
+        "spans_train_test": false,
+        "spans_lighting": false
+      }
+    ],
+    "corrupt_image": [],
+    "missing_label": [],
+    "not_exactly_one_box": [],
+    "malformed_label_row": [],
+    "invalid_class_id": [],
+    "box_outside_image_or_empty": [],
+    "class_differs_from_source_brand": [],
+    "exact_duplicate_files": [],
+    "source_video_in_train_and_test": [],
+    "gps_metadata_present": []
+  }
+}

@@ -1,0 +1,12 @@
+# Analysis, preprocessing and review scripts
+numpy>=1.24
+opencv-python>=4.8
+pillow>=10.0
+matplotlib>=3.7
+
+# Anonymisation pipeline only (scripts/anonymization.py)
+# deface: MIT  |  easyocr: Apache-2.0  |  ultralytics: AGPL-3.0
+# A YOLO licence-plate detector (.pt) must be supplied separately; none is included.
+deface>=1.5
+easyocr>=1.7
+ultralytics>=8.3

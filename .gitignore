@@ -1,0 +1,69 @@
+# ---- Restricted data: never commit ----------------------------------------
+# Raw or processed footage and frames
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.jpg
+*.jpeg
+*.bmp
+*.tif
+*.tiff
+*.webp
+# PNGs are blocked by default; only the reviewed aggregate/synthetic figures are allowed
+*.png
+!analytics/*.png
+!visualizations/annotation-examples/*.png
+!visualizations/preprocessing-examples/*.png
+
+# Dataset folders and pipeline outputs
+images/
+labels/
+data/
+dataset/
+staging/
+review/
+dets/
+work/
+*.cache
+video_info.csv
+manual_blur.csv
+review_log.csv
+detections.json
+metadata.csv
+name_map.csv
+
+# Model weights and archives
+*.pt
+*.pth
+*.onnx
+*.engine
+*.weights
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Notebooks (may embed images, outputs, credentials)
+*.ipynb
+.ipynb_checkpoints/
+
+# ---- Secrets and local environment ----------------------------------------
+.env
+.env.*
+*.key
+*.pem
+credentials*
+secrets*
+
+# ---- Python / tooling ------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini

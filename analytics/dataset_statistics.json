@@ -1,0 +1,72 @@
+{
+  "annotated_images": 1199,
+  "classes": 10,
+  "by_split_condition": {
+    "train/optimal": 500,
+    "train/complex": 499,
+    "test/optimal": 100,
+    "test/complex": 100
+  },
+  "by_class": {
+    "BMW": 120,
+    "Honda": 120,
+    "Hyundai": 119,
+    "Mazda": 120,
+    "Mercedes": 120,
+    "Nissan": 120,
+    "Perodua": 120,
+    "Proton": 120,
+    "Toyota": 120,
+    "Volkswagen": 120
+  },
+  "image_sizes": {
+    "1920x1080": 1199
+  },
+  "image_resolution": "1920\u00d71080",
+  "boxes_per_image": {
+    "1": 1199
+  },
+  "logo_width_px": {
+    "min": 30.0,
+    "median": 77.14,
+    "p90": 113.326,
+    "max": 270.25
+  },
+  "median_luminance": {
+    "optimal": 123.15516469133034,
+    "complex": 88.9490188569136
+  },
+  "augmentation": {
+    "optimal": {
+      "none": 42,
+      "flipH": 43,
+      "rotate_neg": 39,
+      "rotate": 80,
+      "crop": 396
+    },
+    "complex": {
+      "none": 39,
+      "rain": 43,
+      "flipH": 81,
+      "rotate_neg": 78,
+      "rotate": 156,
+      "crop": 202
+    }
+  },
+  "images_with_exif": 0,
+  "source_clips": 1200,
+  "source_frames": 146088,
+  "source_clip_resolution": {
+    "1920x1080": 1200
+  },
+  "source_clip_fps": {
+    "30.0": 1200
+  },
+  "duplicates": {
+    "likely_pairs": 32,
+    "likely_spanning_train_test": 11,
+    "likely_spanning_lighting_conditions": 13,
+    "candidate_pairs": 76,
+    "candidate_spanning_train_test": 26
+  }
+}
